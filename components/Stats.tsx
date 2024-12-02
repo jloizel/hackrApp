@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -17,7 +17,7 @@ export default function Stats() {
   const [totalPuzzles, setTotalPuzzles] = useState(0)
   const [totalWins, setTotalWins] = useState(0)
 
-  // testing useEffect
+  // useEffect for testing, hardcoded data
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,6 +57,8 @@ export default function Stats() {
 
     fetchData();
   }, []);
+
+  // useEffect to retrieve user's accurate data
 
   // useEffect(() => {
   //   const fetchPerformanceData = async () => {
@@ -105,30 +107,13 @@ export default function Stats() {
       alert('Username cannot be empty.');
     }
   };
-  
 
-  const getIconForLanguage = (language: string) => {
-    switch (language) {
-      case 'ReactJS':
-        return <FontAwesome5 name="react" size={40} color="#61DAFB" />; 
-      case 'Python':
-        return <FontAwesome5 name="python" size={40} color="#3776AB" />; 
-      case 'Java':
-        return <FontAwesome5 name="java" size={40} color="#F7DF1E" />; 
-      case 'JavaScript':
-        return <Ionicons name="logo-javascript" size={40} color="#5382A1" />; 
-      case 'C++':
-        return <MaterialCommunityIcons name="language-cpp" size={40} color="#00599C" />; 
-      default:
-        return <FontAwesome5 name="question-circle" size={40} color="#999" />; 
-    }
-  };
 
   const text = useThemeColor({ light: '#06283D', dark: '#fbfbff' }, 'text');
 
   const themeTextColor = useThemeColor({}, 'text');
 
-  const themedInputStyle = {
+  const themedInputStyle = { // theme style for the InputText to change the color of the placeholder and also allow for style class
     ...styles.input,
     color: themeTextColor, 
   };

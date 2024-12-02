@@ -1,21 +1,18 @@
-import { StyleSheet, Image, Platform, View } from 'react-native';
-
-import { Collapsible } from '@/components/Collapsible';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { StyleSheet, View } from 'react-native';
 import { ThemedText } from '@/context/ThemedText';
 import { ThemedView } from '@/context/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import Calendar from '@/components/Calendar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function TabTwoScreen() {
+
   return (
     <ThemedView style={styles.container}>
       <View style={styles.titleContainer}>
         <ThemedText style={styles.title}>Hackr</ThemedText>
       </View>
-      <View style={styles.calendarContainer}>
+      <View>
         <Calendar/>
       </View>
       <SafeAreaView style={styles.toggleContainer}>
@@ -33,7 +30,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   titleContainer: {
-    // alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 0
   },
@@ -48,8 +44,5 @@ const styles = StyleSheet.create({
     top: -50,               
     right: 10,             
     zIndex: 10,           
-  },
-  calendarContainer: {
-
   }
 });

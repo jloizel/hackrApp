@@ -1,5 +1,4 @@
 import { StyleSheet, View } from 'react-native';
-
 import { ThemedText } from '@/context/ThemedText';
 import { ThemedView } from '@/context/ThemedView';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -13,12 +12,10 @@ export default function TabTwoScreen() {
       <View style={styles.titleContainer}>
         <ThemedText style={styles.title}>Hackr</ThemedText>
       </View>
-      <View style={styles.profileContainer}>
+      <View>
         <Stats/>
-        {/* <Achievements/> */}
       </View>
-      <View style={styles.profileContainer}>
-        {/* <Stats/> */}
+      <View>
         <Achievements/>
       </View>
       <SafeAreaView style={styles.toggleContainer}>
@@ -36,7 +33,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   titleContainer: {
-    // alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 0
   },
@@ -51,8 +47,5 @@ const styles = StyleSheet.create({
     top: -50,               
     right: 10,             
     zIndex: 10,           
-  },
-  profileContainer: {
-    
   }
 });

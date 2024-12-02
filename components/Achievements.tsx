@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Modal, Pressable, Text, ScrollView } from 'react-native';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { View, StyleSheet, Modal, Pressable } from 'react-native';
 import { ThemedText } from '@/context/ThemedText';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AntDesign, FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -125,7 +124,7 @@ export function Achievements() {
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
 
   
-  const renderIcon = (library: string, name: string, size: number, color: string) => {
+  const renderIcon = (library: string, name: string, size: number, color: string) => { // function to render the icon depending on the selected library in the achievements object
     switch (library) {
       case 'FontAwesome6':
         return <FontAwesome6 name={name} size={size} color={color} />;
@@ -134,7 +133,7 @@ export function Achievements() {
       case 'MaterialCommunityIcons':
         return <MaterialCommunityIcons name={name} size={size} color={color} />;
       default:
-        return null; // Handle unsupported libraries
+        return null; // handle unsupported libraries
     }
   };
 
@@ -158,7 +157,7 @@ export function Achievements() {
         ))}
       </View>
 
-      {selectedAchievement && (
+      {selectedAchievement && ( //conditionally display the modal if a user clicks on an achievement
         <SafeAreaView style={styles.centeredView}>
           <Modal
             animationType="fade"

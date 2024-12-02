@@ -1,15 +1,11 @@
-import { View, Platform, StyleSheet, LayoutChangeEvent } from 'react-native';
-import { useLinkBuilder, useTheme } from '@react-navigation/native';
-import { Text, PlatformPressable } from '@react-navigation/elements';
-import { BottomTabBarProps, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, StyleSheet, LayoutChangeEvent } from 'react-native';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import TabButton from './TabButton';
 import { useEffect, useState } from 'react';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 
 export function TabBar({ state, descriptors, navigation } : BottomTabBarProps) {
   const [dimensions, setDimensions] = useState({ height: 20, width: 100})
-
-  const defaultSelectedIndex = state.routes.findIndex(route => route.name === 'index');
 
   const buttonWidth = dimensions.width / state.routes.length; //get width of each tab button
   const tabPositionX = useSharedValue(buttonWidth * state.index);
@@ -18,7 +14,7 @@ export function TabBar({ state, descriptors, navigation } : BottomTabBarProps) {
     tabPositionX.value = withSpring(buttonWidth * state.index, { duration: 1500 }); //have the button on the middle page as initial state
   }, [state.index, buttonWidth]);
 
-  const onTabBarLayout = (e: LayoutChangeEvent) => {
+  const onTabBarLayout = (e: LayoutChangeEvent) => { //change position of the button when selected tab changes
     const { height, width } = e.nativeEvent.layout;
     if (width > 0 && height > 0) {
       setDimensions({ height, width });
@@ -34,7 +30,7 @@ export function TabBar({ state, descriptors, navigation } : BottomTabBarProps) {
 
   return (
     <View onLayout={onTabBarLayout} style={styles.tabbar}>
-      <Animated.View style={[animatedStyle,{
+      <Animated.View style={[animatedStyle,{ //style the blue button which moves when user changes tab
           position: 'absolute',
           backgroundColor: '#47B5FF',
           borderRadius: 30,
@@ -51,7 +47,7 @@ export function TabBar({ state, descriptors, navigation } : BottomTabBarProps) {
 
         const onPress = () => {
           if (buttonWidth > 0) {
-            tabPositionX.value = withSpring(buttonWidth * index, { duration: 1500 });
+            tabPositionX.value = withSpring(buttonWidth * index, { duration: 1500 }); // animate the button moving position with a spring effect
           }
           const event = navigation.emit({
             type: 'tabPress',
@@ -78,7 +74,6 @@ export function TabBar({ state, descriptors, navigation } : BottomTabBarProps) {
             onLongPress={onLongPress}
             isFocused={isFocused}
             routeName={route.name}
-            color={ isFocused ? '#47B5FF' : '#222'}
             label={label}
           />
         );

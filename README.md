@@ -87,7 +87,7 @@ Make sure you have the following tools installed on your system:
 
 ### Installation
 
-Some feautures have been commented out for testing purposes (the use of AsyncStorage to keep track of user's game history mainly)
+Some feautures have been commented out for testing purposes (the use of AsyncStorage to keep track of user's game history mainly, timer once submitted etc)
 
 1. Clone the repository:
    ```bash

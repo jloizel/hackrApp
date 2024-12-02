@@ -1,4 +1,4 @@
-import { GestureResponderEvent, Pressable, StyleSheet, Text, View } from 'react-native'
+import { GestureResponderEvent, Pressable, StyleSheet } from 'react-native'
 import React, { useEffect } from 'react'
 import Animated, { interpolate, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { icons, RouteName } from '@/constants/Icon';
@@ -8,12 +8,10 @@ interface TabButtonProps {
   onLongPress: (event: GestureResponderEvent) => void;
   isFocused: boolean;
   routeName: string;
-  color: string;
   label: string;
 }
 
-
-const TabButton: React.FC<TabButtonProps> =({onPress, onLongPress, isFocused, routeName, color, label}) => {
+const TabButton: React.FC<TabButtonProps> =({onPress, onLongPress, isFocused, routeName, label}) => {
 
   const scale = useSharedValue(0)
 

@@ -1,25 +1,16 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Button, Alert, StyleSheet, Text, View, TextInput, ActivityIndicator, ScrollView, useColorScheme, TouchableOpacity, Keyboard, TouchableWithoutFeedback, Pressable, KeyboardAvoidingView, Platform } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Alert, StyleSheet, Text, View, TextInput, ActivityIndicator, ScrollView, TouchableOpacity, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ThemedView } from '@/context/ThemedView';
 import { ThemedText } from '@/context/ThemedText';
 import axios from 'axios';
 import { Picker } from '@react-native-picker/picker';
-import ParallaxScrollView from './ParallaxScrollView';
-import { Colors } from '@/constants/Colors';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Timer from './Timer';
-import { ThemeContext } from '@/context/ThemeContext';
-import { useTheme } from '@/hooks/useTheme';
 import TypeWriter from 'react-native-typewriter'
 import CodeHighlighter from "react-native-code-highlighter";
-import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { solarizedLight, github, atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-
 
 
 export function Puzzle() {
@@ -44,31 +35,26 @@ export function Puzzle() {
     return midnight;
   });
 
-  const themeTextColor = useThemeColor({}, 'text');
-
-  const themedInputStyle = {
-    ...styles.input,
-    color: themeTextColor, 
-  };
+  
 
   useEffect(() => {
     initializeDailyState();
   }, []);
 
   const initializeDailyState = async () => {
-    const today = new Date().toISOString().split('T')[0];
-  
+    const today = new Date().toISOString().split('T')[0]; // get today's date in the format YYYY-MM-DD
+
     const submissions = await AsyncStorage.getItem('submissionsStatus');
-    const submissionsObj = submissions ? JSON.parse(submissions) : {};
-  
-    if (submissionsObj[today]) {
-      setHasSubmittedToday(true);
-    } else {
-      submissionsObj[today] = 'notSubmitted';
-      await AsyncStorage.setItem('submissionsStatus', JSON.stringify(submissionsObj));
-      setHasSubmittedToday(false);
+    const submissionsObj = submissions ? JSON.parse(submissions) : {}; // parse the retrieved JSON string into an object
+
+    if (submissionsObj[today]) { // check if there's an entry for today's date in the submissions object
+        setHasSubmittedToday(true);
+    } else {       
+        submissionsObj[today] = 'notSubmitted';  // if no entry today, a new entry for today with a status of 'notSubmitted'
+        await AsyncStorage.setItem('submissionsStatus', JSON.stringify(submissionsObj));
+        setHasSubmittedToday(false);
     }
-  };
+};
   
 
   // function passed down to Timer component, reset all constants i.e. provide a new puzzle
@@ -127,7 +113,7 @@ export function Puzzle() {
     const performanceKey = 'userPerformance';
     const performanceData = await AsyncStorage.getItem(performanceKey);
   
-    const data = performanceData
+    const data = performanceData  // parse the retrieved JSON string into an object, if no entry initialise with default values
       ? JSON.parse(performanceData)
       : { streak: 0, maxStreak: 0, languageCounts: {}, totalWins: 0 };
   
@@ -208,7 +194,7 @@ export function Puzzle() {
     setShowAnswerInput(true);
   };
 
-  const renderFormattedText = (text: string) => {
+  const renderFormattedText = (text: string) => { //function which splits the code snippet from the API prompt using the 3 back ticks, extract the code and the normal text
     const regex = /```([\s\S]*?)```/g; 
     const parts = text.split(regex);
   
@@ -244,18 +230,24 @@ export function Puzzle() {
   }, [typingCompleted]);
 
 
-  //enable daily puzzle feature
-
-  // if (hasSubmittedToday) {
-  //   return (
-  //     <ThemedView style={styles.container}>
-  //       <ThemedText style={styles.message}>You’ve already played a puzzle today. Play again in:</ThemedText>
-  //       <Timer targetTime={targetTime} onCountdownComplete={handleCountdownComplete} />
-  //     </ThemedView>
-  //   );
-  // }
+  // enable daily puzzle feature (comment out if not needed)
+  if (hasSubmittedToday) {
+    return (
+      <ThemedView style={styles.container}>
+        <ThemedText style={styles.message}>You’ve already played a puzzle today. Play again in:</ThemedText>
+        <Timer targetTime={targetTime} onCountdownComplete={handleCountdownComplete} />
+      </ThemedView>
+    );
+  }
 
   const text = useThemeColor({ light: '#06283D', dark: '#fbfbff' }, 'text');
+
+  const themeTextColor = useThemeColor({}, 'text');
+
+  const themedInputStyle = { // theme style for the InputText to change the color of the placeholder and also allow for style class
+    ...styles.input,
+    color: themeTextColor, 
+  };
 
   return (
     <View style={styles.container}>

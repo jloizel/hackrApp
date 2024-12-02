@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { ThemedText } from '@/context/ThemedText'
 
@@ -10,8 +10,8 @@ interface TimerProps {
 const Timer: React.FC<TimerProps> = ({targetTime, onCountdownComplete}) => {
   const [countdown, setCountdown] = useState('');
 
-  useEffect(() => {
-    const calculateTimeRemaining = () => {
+  useEffect(() => { 
+    const calculateTimeRemaining = () => { // function to calculate and update the countdown time remaining
       const now = new Date();
       const timeRemaining = targetTime.getTime() - now.getTime();
 
@@ -21,6 +21,7 @@ const Timer: React.FC<TimerProps> = ({targetTime, onCountdownComplete}) => {
         return;
       }
 
+      // calculate hours, minutes, and seconds from the remaining time
       const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
       const seconds = Math.floor((timeRemaining / 1000) % 60);

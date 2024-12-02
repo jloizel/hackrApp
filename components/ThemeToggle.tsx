@@ -1,4 +1,4 @@
-import { StyleSheet, useColorScheme } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { ThemedView } from '@/context/ThemedView';
 import { useTheme } from '@/hooks/useTheme';
 import Entypo from '@expo/vector-icons/Entypo';
@@ -9,7 +9,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 
-  const toggleIconColor = useThemeColor({ light: '#06283D', dark: '#fbfbff' }, 'toggleColor');
+  const toggleIconColor = useThemeColor({ light: '#06283D', dark: '#fbfbff' }, 'toggleColor'); // change color of icon depending on the selected theme
 
   return (
     <ThemedView style={styles.container}>

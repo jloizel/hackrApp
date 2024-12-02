@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { ThemedText } from '@/context/ThemedText';
 import { ThemedView } from '@/context/ThemedView';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -12,10 +12,9 @@ export default function HomeScreen() {
       <View style={styles.titleContainer}>
         <ThemedText style={styles.title}>Hackr</ThemedText>
       </View>
-      <View style={styles.puzzleContainer}>
+      <View>
         <Puzzle/>
       </View>
-    
       <SafeAreaView style={styles.toggleContainer}>
         <ThemeToggle />
       </SafeAreaView>
@@ -26,14 +25,10 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    // gap: 10,
-    // justifyContent: 'center',
-    // padding: 30,
     position: 'relative', 
     alignItems: 'center',
   },
   titleContainer: {
-    // alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 0
   },
@@ -48,8 +43,5 @@ const styles = StyleSheet.create({
     top: -50,               
     right: 10,             
     zIndex: 10,           
-  },
-  puzzleContainer: {
-    
   }
 });

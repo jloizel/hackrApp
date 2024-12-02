@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Modal, Pressable, Alert } from 'react-native';
+import { View, Text, StyleSheet, Modal, Pressable } from 'react-native';
 import { Calendar } from 'react-native-calendars';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { ThemedView } from '@/context/ThemedView';
 import { ThemedText } from '@/context/ThemedText';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { useTheme } from '@/hooks/useTheme';
 import Entypo from '@expo/vector-icons/Entypo';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AntDesign from '@expo/vector-icons/AntDesign';
-
 
 interface MarkedDate {
   marked: boolean;
@@ -27,7 +22,7 @@ const CustomCalendar = () => {
   const [selectedDateStatus, setSelectedDateStatus] = useState<string | null>(null);
   const [openModal, setOpenModal] = useState(false)
 
-  // test with multiple dates
+  // useEffect to test with multiple dates, hardcoded data
 
   useEffect(() => {
     const statusData = {
@@ -66,6 +61,8 @@ const CustomCalendar = () => {
     setMarkedDates(statusData);
   }, []);
 
+  // useEffect which should work for a user's actual activity
+
   // useEffect(() => {
   //   const fetchMarkedDates = async () => {
   //     const submissions = await AsyncStorage.getItem('submissionsStatus');
@@ -102,7 +99,7 @@ const CustomCalendar = () => {
     if (dateInfo.language) {
       setSelectedDateLanguage(dateInfo.language);
   
-      // check if the puzzle is marked as correct or incorrect and change the message accordingly
+      // check if the puzzle is marked as correct or incorrect and change the status accordingly
       if (dateInfo.dotColor === 'green') {
         setSelectedDateStatus('successfully')
       } else {
