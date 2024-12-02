@@ -30,7 +30,7 @@
 
 What makes **Hackr** stand out is its integration with the OpenAI API, providing real-time feedback. This feature helps users understand their coding solutions and receive instant, AI-powered suggestions for improvements, making it a great tool for learning and development.
 
-The development of this project allowed me to explore the exciting possibilities of mobile app development which deepened my expertise in React Native and mobile development, while also refining my ability to troubleshoot, optimize performance, and deliver a user-friendly app to users.
+The development of this project allowed me to explore the exciting possibilities of mobile app development which deepened my expertise in React Native and mobile development, while also refining my ability to troubleshoot, optimise performance, and deliver a user-friendly app to users.
 
 ### List of improvements/additions
 <li>User authentication</li>
