@@ -2,8 +2,8 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/jloizel/hackr">
-    <img src="https://github.com/jloizel/hackr/blob/main/assets/images/hackr.png" alt="Logo" width="auto" height="300">
+  <a href="https://github.com/jloizel/hackrApp">
+    <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/hackr.png" alt="Logo" width="auto" height="300">
   </a>
 
 <h2 align="center">Hackr</h2>
@@ -11,14 +11,10 @@
   <p align="center">
     Hackr is an interactive coding challenge platform designed to help you develop your programming skills through engaging daily coding puzzles.
     <br />
-    <a href="https://github.com/jloizel/hackr"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://github.com/jloizel/hackrApp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jloizel/metroguessr-client">View Live Project</a>
-    ·
-    <a href="https://github.com/jloizel/hackr/issues/new?labels=bug&template=bug-report---.md">Leave some feedback</a>
-<!--     ·
-    <a href="https://github.com/jloizel/hackr/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
   </p>
 </div>
 
@@ -61,15 +57,15 @@ The development of this project allowed me to explore the exciting possibilities
 Here are some screenshots of **Hackr** live:
 
 <div align="center">
-  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_dark2.jpeg" alt="Screenshot 1" width="30%" style="margin: 10px;"/>
-  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_dark1.jpeg" alt="Screenshot 2" width="30%" style="margin: 10px;"/>
-  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_dark3.jpeg" alt="Screenshot 3" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/Hackr_dark2.jpeg" alt="Screenshot 1" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/Hackr_dark1.jpeg" alt="Screenshot 2" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/Hackr_dark3.jpeg" alt="Screenshot 3" width="30%" style="margin: 10px;"/>
 </div>
 
 <div align="center">
-  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_light2.jpeg" alt="Screenshot 4" width="30%" style="margin: 10px;"/>
-  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_light1.jpeg" alt="Screenshot 5" width="30%" style="margin: 10px;"/>
-  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_light3.jpeg" alt="Screenshot 6" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/Hackr_light2.jpeg" alt="Screenshot 4" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/Hackr_light1.jpeg" alt="Screenshot 5" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackrApp/blob/main/assets/images/Hackr_light3.jpeg" alt="Screenshot 6" width="30%" style="margin: 10px;"/>
 </div>
 
 ## 🚀 Getting Started
