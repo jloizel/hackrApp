@@ -231,14 +231,14 @@ export function Puzzle() {
 
 
   // enable daily puzzle feature (comment out if not needed)
-  if (hasSubmittedToday) {
-    return (
-      <ThemedView style={styles.container}>
-        <ThemedText style={styles.message}>You’ve already played a puzzle today. Play again in:</ThemedText>
-        <Timer targetTime={targetTime} onCountdownComplete={handleCountdownComplete} />
-      </ThemedView>
-    );
-  }
+  // if (hasSubmittedToday) {
+  //   return (
+  //     <ThemedView style={styles.container}>
+  //       <ThemedText style={styles.message}>You’ve already played a puzzle today. Play again in:</ThemedText>
+  //       <Timer targetTime={targetTime} onCountdownComplete={handleCountdownComplete} />
+  //     </ThemedView>
+  //   );
+  // }
 
   const text = useThemeColor({ light: '#06283D', dark: '#fbfbff' }, 'text');
 
