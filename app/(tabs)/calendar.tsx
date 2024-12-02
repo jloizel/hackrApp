@@ -1,21 +1,23 @@
-import { Image, StyleSheet, Platform, View } from 'react-native';
+import { StyleSheet, Image, Platform, View } from 'react-native';
+
+import { Collapsible } from '@/components/Collapsible';
+import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/context/ThemedText';
 import { ThemedView } from '@/context/ThemedView';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { Puzzle } from '@/components/Puzzle';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import Calendar from '@/components/Calendar';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
-export default function HomeScreen() {
-
+export default function TabTwoScreen() {
   return (
     <ThemedView style={styles.container}>
       <View style={styles.titleContainer}>
         <ThemedText style={styles.title}>Hackr</ThemedText>
       </View>
-      <View style={styles.puzzleContainer}>
-        <Puzzle/>
+      <View style={styles.calendarContainer}>
+        <Calendar/>
       </View>
-    
       <SafeAreaView style={styles.toggleContainer}>
         <ThemeToggle />
       </SafeAreaView>
@@ -26,11 +28,9 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    // gap: 10,
-    // justifyContent: 'center',
-    // padding: 30,
     position: 'relative', 
     alignItems: 'center',
+    flex: 1
   },
   titleContainer: {
     // alignItems: 'center',
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     right: 10,             
     zIndex: 10,           
   },
-  puzzleContainer: {
-    
+  calendarContainer: {
+
   }
 });

@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+<a id="readme-top"></a>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<br />
+<div align="center">
+  <a href="https://github.com/jloizel/hackr">
+    <img src="https://github.com/jloizel/hackr/blob/main/assets/images/hackr.png" alt="Logo" width="auto" height="300">
+  </a>
 
-## Get started
+<h2 align="center">Hackr</h2>
 
-1. Install dependencies
+  <p align="center">
+    Hackr is an interactive coding challenge platform designed to help you develop your programming skills through engaging daily coding puzzles.
+    <br />
+    <a href="https://github.com/jloizel/hackr"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/jloizel/metroguessr-client">View Live Project</a>
+    ·
+    <a href="https://github.com/jloizel/hackr/issues/new?labels=bug&template=bug-report---.md">Leave some feedback</a>
+<!--     ·
+    <a href="https://github.com/jloizel/hackr/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
+  </p>
+</div>
+
+
+<!-- ABOUT THE PROJECT -->
+## 📝 About The Project
+
+**Hackr** is my first mobile application built using React Native. This app was designed to provide an interactive and engaging way for users to develop their coding skills through randomly generated daily coding puzzles.
+
+What makes **Hackr** stand out is its integration with the OpenAI API, providing real-time feedback. This feature helps users understand their coding solutions and receive instant, AI-powered suggestions for improvements, making it a great tool for learning and development.
+
+The development of this project allowed me to explore the exciting possibilities of mobile app development which deepened my expertise in React Native and mobile development, while also refining my ability to troubleshoot, optimize performance, and deliver a user-friendly app to users.
+
+### List of improvements/additions
+<li>User authentication</li>
+<li>Difficulty picker</li>
+<li>Option for the user to pick any coding language</li>
+<li>Enable notifications to remind users to play their daily puzzle</li>
+
+
+### Built With (***non-exhaustive***)
+
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/react-color.svg" alt="react native" height="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/typescript-color.svg" alt="typescript" height="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/openai-color.svg" alt="openapi" height="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/expo-color.svg" alt="expo" height="35px"/></code>
+
+</br>
+
+## 🎮 How to Play
+
+1. Choose a coding language from the available options.
+2. Solve the coding problem.
+3. Submit your solution and get immediate feedback.
+4. Check your playing history and results through the calendar tab.
+5. Track your stats and achievements through your player profile.
+
+## 📸 Media
+
+Here are some screenshots of **Hackr** live:
+
+<div align="center">
+  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_dark2.jpeg" alt="Screenshot 1" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_dark1.jpeg" alt="Screenshot 2" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_dark3.jpeg" alt="Screenshot 3" width="30%" style="margin: 10px;"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_light2.jpeg" alt="Screenshot 4" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_light1.jpeg" alt="Screenshot 5" width="30%" style="margin: 10px;"/>
+  <img src="https://github.com/jloizel/hackr/blob/main/assets/images/Hackr_light3.jpeg" alt="Screenshot 6" width="30%" style="margin: 10px;"/>
+</div>
+
+## 🚀 Getting Started
+
+Follow these steps to clone and run **Hackr** on your local machine:
+
+### Prerequisites
+
+Make sure you have the following tools installed on your system:
+
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) (for running the React Native app)
+- A mobile simulator (such as Xcode for iOS or Android Studio for Android) or a physical device with the Expo Go app.
+
+### Installation
+
+Some feautures have been commented out for testing purposes (the use of AsyncStorage to keep track of user's game history mainly)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jloizel/hackr.git
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
