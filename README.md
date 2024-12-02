@@ -91,7 +91,7 @@ Some feautures have been commented out for testing purposes (the use of AsyncSto
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jloizel/hackr.git
+   git clone https://github.com/jloizel/hackrApp.git
    ```
 
 2. Install dependencies
