@@ -9,7 +9,7 @@
 <h2 align="center">Hackr</h2>
 
   <p align="center">
-    Hackr is an interactive coding challenge platform designed to help you develop your programming skills through engaging daily coding puzzles.
+    Hackr is an interactive coding challenge app designed to help you develop your programming skills through engaging daily coding puzzles.
     <br />
     <br />
     <a href="https://github.com/jloizel/hackrApp"><strong>Explore the docs »</strong></a>
