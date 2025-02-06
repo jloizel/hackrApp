@@ -24,9 +24,9 @@
 
 **Hackr** is my first mobile application built using React Native. This app was designed to provide an interactive and engaging way for users to develop their coding skills through randomly generated daily coding puzzles.
 
-What makes **Hackr** stand out is its integration with the OpenAI API, providing real-time feedback. This feature helps users understand their coding solutions and receive instant, AI-powered suggestions for improvements, making it a great tool for learning and development.
+What makes **Hackr** stand out is its integration with the OpenAI API, allowing users to select a programming language and receive a coding puzzle to solve daily.
 
-The development of this project allowed me to explore the exciting possibilities of mobile app development which deepened my expertise in React Native and mobile development, while also refining my ability to troubleshoot, optimise performance, and deliver a user-friendly app to users.
+The development of this project allowed me to explore the exciting possibilities of mobile app development and AI, which developed my React Native skills whilst also improving my ability to troubleshoot and optimise performance.
 
 ### List of improvements/additions
 <li>User authentication</li>
