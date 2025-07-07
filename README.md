@@ -37,10 +37,10 @@ The development of this project allowed me to explore the exciting possibilities
 
 ### Built With (***non-exhaustive***)
 
-<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/react-color.svg" alt="react native" height="35px"/></code>
-<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/typescript-color.svg" alt="typescript" height="35px"/></code>
-<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/openai-color.svg" alt="openapi" height="35px"/></code>
-<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/expo-color.svg" alt="expo" height="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/react-color.svg" alt="react native" height="35px" width="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/typescript-color.svg" alt="typescript" height="35px" width="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/openai-color.svg" alt="openapi" height="35px" width="35px"/></code>
+<code><img src="https://github.com/jloizel/jloizel/blob/main/Assets/expo-color.svg" alt="expo" height="35px" width="35px"/></code>
 
 </br>
 
